@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>A Deep and Longitudinal Approach to Mining Mobile Applications</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/league.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/github.css">
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>A Deep and Longitudinal Approach to Mining Mobile Applications</h2>
+				<h3>Khalid Alharbi</h3>
+				<div style="background-color:#FFFFFF;">
+					<img src="./images/CU.png" alt="University of Colorado Logo" />
+					<img src="./images/sikuli.png" alt="Sikuli Lab Logo" />
+				</div>
+				<p style="font-size:50%;">Ph.D. Dissertation Defense</p>
+				<p style="font-size:50%;">November 11th, 2016</p>
+			</section>
+			<section>
+				<h2>Outline</h2>
+				<ul>
+					<li>Introduction</li>
+					<li>Problem Statement</li>
+					<li>A Pilot Experiment</li>
+					<li>Approach</li>
+					<li>Sieveable: A Scalable platform</li>
+					<li>Search Queries</li>
+					<li>Temporal Analysis</li>
+					<li>Future Work</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Digital Marketplaces</h2>
+				<img style="width:80%; background-color:#EAEAEA" src="./images/marketplaces/digital-marketplaces.png" alt="Digital Marketplaces" />
+			</section>
+			<section>
+				<h2>Mobile Applications</h2>
+				<img class="width: 100%; height: 80%; margin:0; padding:0;" src="./images/apps.jpg" alt="Mobile Apps"/>
+			</section>
+			<section>
+				<h2>Apps Data is a valubale source of information</h2>
+				<blockquote>
+
+				</blockquote>
+			</section>
+			<section>
+				<div class="right-column">
+					<img style="width: 420px; height: 700px; margin:0; padding:0;" src="./images/screenshots/instacart-listing-page.png" alt="The listing details page in Google Play for instacart" />
+				</div>
+				<div class="left-column">
+					<h2>Mining Listing Details</h2>
+					<ul>
+						<li>Sentiment analysis</li>
+						<li>Topic analysis</li>
+						<li>Predicting apps behavior</li>
+						<li>Clone detection</li>
+						<li>Spam filtering</li>
+						<li>Causal impact analysis</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div class="right-column">
+					<img style="width: 420px; height: 700px; margin:0; padding:0;" src="./images/screenshots/fabulous.png" alt="A screenshot of an Android app titled Fabulous" />
+				</div>
+				<div class="left-column">
+					<h2>Mining Visual Design</h2>
+					<ul>
+						<li>Accessibility</li>
+						<li>Visual aesthetics</li>
+						<li>Design demographics</li>
+						<li>Design evaluation</li>
+						<li>Design examples</li>
+						<li>Design patterns</li>
+						<li>Privacy &amp; security issues</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div class="right-column">
+					<img style="width: 420px; height: 700px; margin:0; padding:0;" src="./images/screenshots/facebook.png" alt="The list of permissions requested by Facebook for Android" />
+				</div>
+				<div class="left-column">
+					<h2>Mining Source Code</h2>
+					<ul>
+						<li>Static program analysis </li>
+						<li>Mining software repositories</li>
+						<li>Quality assessment</li>
+						<li>Clone detection</li>
+						<li>Privacy &amp; security issues</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<blockquote>Prior research efforts have been largely constrained to one view of analysis and a single snapshot in time. </blockquote>
+			</section>
+			<section class="vertical-stretch">
+				<!--<h2 style="margin:0; padding:0;">The State of Existing Research</h2>-->
+				<div id="69e8960f-225e-4bf4-a980-22bee5917698" style="height: 700px; width: 1000px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("69e8960f-225e-4bf4-a980-22bee5917698", [{"name": "Privacy", "y": ["Code", "Code", "Listing", "Listing+Code"], "marker": {"size": [1.3416407864998738, 60.0, 15.812020743725325, 80.59007383046624], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}, "text": ["Enck et al.<br>OSDI \u201910", "Liu et al<br>MobiSys \u201915", "Seneviratne et al.<br>SPME \u201914", "Lin et al.<br>SOUPS \u201914"], "mode": "markers", "x": ["Single", "Single", "Single", "Single"], "type": "scatter"}, {"name": "Data Mining", "y": ["Listing", "Listing+UI", "Listing", "Listing", "Listing", "Listing+UI+Code", "Listing+UI+Code"], "marker": {"size": [101.43756700552315, 4.898979485566356, 36.019994447528724, 19.784842683225964, 30.044966300530277, 58.14585109876714, 164.82263194112633], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}, "text": ["Fu et al.<br>SIGKDD \u201913", "Shirazi et al.<br>EICS \u201913", "Chen et al.<br>WSDM \u201915", "Lin et al.<br>SIGIR \u201914", "Zhu et al.<br>TKDE \u201915", "Alharbi et all<br>MobileHCI \u201915", "Alharbi et all<br>"], "mode": "markers", "x": ["Few", "Single", "Single", "Few", "Few", "Few", "Many"], "type": "scatter"}, {"name": "Security", "y": ["Code", "Listing+Code", "Code", "Listing+Code", "Listing+Code", "Code", "Listing+Code"], "marker": {"size": [1.2727922061357855, 229.78250586152114, 25.69046515733026, 67.08203932499369, 5.904235767650205, 8.694826047713663, 36.742346141747674], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}, "text": ["Wei et al<br>Mobicom \u201912", "Viennot et al.<br>SIGMETRICS \u201914", "Rasthofer et al.<br>NDSS \u201914", "Crussell et al.<br>ESORICS \u201912", "Pandita et al.<br>SEC \u201913", "Zhou et al.<br>SP \u201912", "Gorla et al<br>ICSE \u201914"], "mode": "markers", "x": ["Single", "Single", "Single", "Few", "Single", "Single", "Single"], "type": "scatter"}, {"name": "Software Engineering", "y": ["Listing+Code", "Listing+Code", "Listing", "Listing", "Listing+Code"], "marker": {"size": [1.0954451150103321, 25.353106318555916, 39.75349041279269, 0.4898979485566356, 1.3190905958272918], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}, "text": ["Minelli et al.<br>CSMR \u201913", "McIlroy et al.<br>Empirical Software Engineering \u201915", "Martin et al.<br>FSE \u201916", "Chen et al.<br>ICSE \u201914", "Liu et all<br>ICSE \u201914"], "mode": "markers", "x": ["Few", "Many", "Many", "Single", "Single"], "type": "scatter"}], {"title": "", "margin": {"t": 0, "pad": 0}, "xaxis": {"title": "App Versions Studied", "titlefont": {"size": 14, "family": "sans-serif"}, "type": "category"}, "height": 700, "yaxis": {"tickangle": -45, "titlefont": {"size": 14, "family": "sans-serif"}, "type": "category"}, "width": 1000}, {"showLink": false, "linkText": "Export to plot.ly"})</script>
+			</section>
+			<section>
+				<blockquote>Despite the wealth of information that exists in apps data, it remains largely unutilized and has not been widely used to address critical issues concerning the development and design of applications.</blockquote>
+			</section>
+			<section>
+				<h2>Deep Approach</h2>
+				<blockquote>Deep and structural indexing of apps across multiple levels (listing, UI, code, libraries, backend providers)</blockquote>
+			</section>
+			<section>
+				<h2>Sentiment Analysis</h2>
+				<div class="image">
+					<h2>UI</h2>
+				  <img src="./images/review-1.png" style="width: 70%;" alt="App review example" />
+				</div>
+				<div class="image">
+					<h2>Code</h2>
+			  	<img src="./images/review-2.png" style="width: 70%;" alt="App review example" />
+				</div>
+			</section>
+			<section class="vertical-stretch">
+				<h2>Privacy Analysis</h2>
+				<div class="right-column">
+					<img style="width: 340px; margin:0; padding:0;" src="./images/barcode-scanner-ui.png" alt="Barcode scanner app UI screenshot" />
+				</div>
+				<div class="left-column">
+					<img style="width: 420px; margin:0; padding:0;" src="./images/barcode-scanner-review.png" alt="Barcode scanner app review" />
+				</div>
+			</section>
+			<section>
+				<h2>Accessibility Analysis</h2>
+				<h4 style="text-align: left;">Layout XML file:</h4>
+				<pre><code class="html">
+&lt;ImageButton
+    ANDROID:ID="1"
+    android:id="@+id/edit_img_button"
+    android:contentDescription="Edit" /&gt;
+&lt;ImageButton
+    android:id="@+id/camera_image_button" /&gt;
+				</code></pre>
+				<h4 style="text-align: left;">Source code file:</h4>
+				<pre><code class="Java">
+ImageButton cameraImageButton = (ImageButton) findViewById(
+                                  R.id.camera_image_button);
+cameraImageButton.setContentDescription('Take a picture');
+				</code></pre>
+			</section>
+			<section>
+				<h2>Longitudinal Approach</h2>
+				<blockquote>Observe the dynamics of apps over long time across multiple levels</blockquote>
+			</section>
+			<section>
+				<h2></h2>
+			</section>
+			<section>
+				<h2>As we come to recognize the value in mining apps with both a deep and longitudinal perspectives...</h2>
+				<ul>
+					<li class="fragment">Challenging to model large and heterogeneous data</li>
+				  <li class="fragment">Difficult to collect historical data</li>
+				  <li class="fragment">Hard to observe changes</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			slideNumber: true,
+			history: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [{
+				src: 'plugin/markdown/marked.js'
+			}, {
+				src: 'plugin/markdown/markdown.js'
+			}, {
+				src: 'plugin/notes/notes.js',
+				async: true
+			}, {
+				src: 'plugin/highlight/highlight.js',
+				async: true,
+				callback: function() {
+					hljs.initHighlightingOnLoad();
+				}
+			}]
+		});
+	</script>
+</body>
+
+</html>

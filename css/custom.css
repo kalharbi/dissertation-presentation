@@ -1,0 +1,64 @@
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    text-transform: none;
+}
+
+.lower-left-corner {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.lower-right-corner {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+.reveal section img {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.reveal .slides>section.vertical-stretch {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    width: auto;
+}
+
+.right-column {
+    left: 31.25%;
+    top: 75px;
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+.left-column {
+    left: -8.33%;
+    text-align: left;
+    float: left;
+    width: 50%;
+}
+.left-column ul li {
+  padding: 10px 0px;
+}
+.image {
+   position: relative;
+}
+
+.image h2 {
+   color: #FFFFFF;
+   font: bold 34px/55px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   padding: 10px;
+   text-align: left;
+   background: rgb(255, 255, 255); /* fallback color */
+   background: rgba(255, 255, 255, 0.5);
+   position: absolute;
+   top: 10%;
+   left: 0%;
+   right: 10px;
+   width: 14%;
+}
