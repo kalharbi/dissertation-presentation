@@ -363,6 +363,118 @@ cameraImageButton.setContentDescription('Take a picture');
 				</ul>
 			</section>
 			<section>
+				<h2>Requirements</h2>
+				<ul class="styled-list">
+					<li>Deep</li>
+					<li>Generalizable</li>
+					<li>Extensible</li>
+					<li>Scalable</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Data Collection</h2>
+				<ul class="styled-list">
+					<li>Web and marketplace crawlers</li>
+					<li>Collected over 450,000 apps</li>
+					<li>Multiple versions are collected</li>
+					<li>Decompile downloaded apps</li>
+					<li>Extract listing details, UI, manifest, and code features</li>
+					<li>Total dataset size is over 10 TB</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Indexing the Extracted Features</h2>
+				<ul>
+					<li>Listing Details</li>
+					<ul>
+						<li>Single-field and text indexes</li>
+					</ul>
+					<li>UI</li>
+					<ul>
+						<li>Structural indexes that keep track of all DOM elements' relationships.</li>
+					</ul>
+					<li>Manifest</li>
+					<ul>
+					  <li>Index DOM elements and their attributes</li>
+					</ul>
+					<li>Code</li>
+					<ul>
+					  <li>Full-text indexes </li>
+				  </ul>
+				</ul>
+			</section>
+			<section>
+				<h2>Query Language Specification</h2>
+				<h3>SQL-like declarative query and example based syntax</h3>
+				<pre>
+					<code class="html" style="font-size: 22px;">
+MATCH app
+WHERE
+  &lt;developer&gt;Google Inc.&lt;/developer&gt;
+  &lt;LinearLayout&gt;
+      &lt;Button/&gt;
+  &lt;/LinearLayout&gt;
+  &lt;uses-permission android:name="android.permission.SEND_SMS"/&gt;
+  &lt;code class="android.hardware.Camera" method="takePicture"/&gt;
+RETURN app
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Query Language Specification</h2>
+				<h3>Query Execution</h3>
+				<div class="right-column" style="width:60%;">
+					<pre>
+						<code class="html" style="font-size: 16px;">
+MATCH app
+WHERE
+&lt;developer&gt;Google Inc.&lt;/developer&gt;
+&lt;LinearLayout&gt;
+  &lt;Button/&gt;
+&lt;/LinearLayout&gt;
+&lt;uses-permission
+  android:name="android.permission.SEND_SMS"/&gt;
+&lt;code class="android.hardware.Camera"
+  method="takePicture"/&gt;
+RETURN app
+						</code>
+				</div>
+				<div class="left-column" style="width:40%;">
+					<img src="images/part2/queryExecution.png" alt="sieveable query execution" />
+				</div>
+			</section>
+			<section>
+				<h2>Query Examples</h2>
+				<div class="right-column">
+					<h4 style="text-align: left;">Unusual Number of Permissions</h4>
+					<pre>
+						<code class="html">
+MATCH app
+WHERE
+&lt;uses-permission
+ android:name="android.permission.*"
+ __min="11" /&gt;
+&lt;uses-permission
+ android:name="*_SMS"/&gt;
+RETURN app
+						</code>
+					</pre>
+				</div>
+				<div class="left-column">
+					<h4>Potential software vulnerability</h4>
+					<pre>
+						<code class="html">
+MATCH app
+WHERE
+&lt;code
+  method="addJavascriptInterface"/&gt;
+&lt;uses-sdk
+  android:targetSdkVersion="12"/&gt;
+RETURN app
+
+						</code>
+					</pre>
+				</div>
 			</section>
 			<section>
 				<div class="right-column">
