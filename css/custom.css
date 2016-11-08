@@ -62,3 +62,24 @@
    right: 10px;
    width: 14%;
 }
+.footnote p {
+  font-size: 20px;
+  padding: 10px;
+}
+.footnote {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0%;
+  width: 100%;
+}
+ul.styled-list li {
+  padding: 10px 0px;
+}
+ul.horizontal-list > li {
+  padding-left: 20px;
+  display: inline-block;
+}
+ul.horizontal-list > li:before {
+  content: "-";
+}

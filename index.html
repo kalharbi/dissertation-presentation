@@ -200,8 +200,175 @@ cameraImageButton.setContentDescription('Take a picture');
 				  <li class="fragment">Hard to observe changes</li>
 				</ul>
 			</section>
+
 			<section>
-				<h2>Mining Design Pattern Changes: <br/>A Pilot Experiment</h2>
+				<h2>Thesis Statement</h2>
+				<blockquote>The goal of this work is to enable a more in-depth analysis of mobile applications and gain insights into various aspects of their design and development processes as they evolve over time.</blockquote>
+			</section>
+			<section>
+				<h2>Research Questions</h2>
+				<ul>
+					<li>RQ1: What are the benefits of the deep and longitudinal approach to mining mobile applications?</li>
+					<li>RQ2: How can we enable deep searching and mining of mobile apps over time?</li>
+			</section>
+			<section>
+				<h2>RQ1.1: What could a deep and longitudinal approach achieve in UI design mining?</h2>
+			</section>
+			<section>
+				<h2 style="margin: 20% 0px">Mining Design Pattern Changes: <br/>A Pilot Experiment*</h2>
+				<div class="footnote">
+					<p>
+* Collect, Decompile, Extract, Stats, and Diff: Mining Design Pattern Changes in Android Apps<br/>
+<span style="font-size: 14px;">Khalid Alharbi and Tom Yeh, MobileHCI 2015, Honorable Mention Award &#x2606;</span>
+</p>
+				</div>
+			</section>
+			<section>
+				<h2>UI Design Patterns</h2>
+				<div class="right-column">
+					<img style="width: 340px; margin:10px; padding:0;" src="./images/part1/actionBarTabs.png" alt="Android action bar with tabs example" />
+					<img style="width: 340px; margin:10px; padding:0;" src="./images/part1/drop-down-menu.jpg" alt="Android drop down menu example" />
+					<img style="width: 340px; margin:10px; padding:0;" src="./images/part1/menu-list.png" alt="Android horizontal menu list example" />
+				</div>
+				<div class="left-column">
+					<img style="width: 340px; margin:0; padding:0;" src="./images/part1/navdrawer.png" alt="Android navigation drawer example" />
+				</div>
+			</section>
+			<section data-background-size="contain"  data-background="./images/part1/design-guidelines.png" />
+			</section>
+			<section data-background-size="contain"  data-background="./images/part1/evernote-versions.png" />
+			</section>
+			<section>
+				<h2>UI Design Patterns Are Always Evolving</h2>
+				<h3>How can we observe and quantify the changes?</h3>
+			</section>
+			<section>
+				<h2>A Data-Driven Approach</h2>
+				<ul class="styled-list">
+					<li><span style="font: bold 16px/42px inherit; color:#FFFFFF">Collect</span><span style="color: #9c9e9e;"> apps and their subsequent versions</span></li>
+					<li><span style="font: bold 16px/42px inherit; color:#FFFFFF">Decompile</span><span style="color: #9c9e9e;"> apps to their nearly original form</span></li>
+					<li><span style="font: bold 16px/42px inherit; color:#FFFFFF">Extract</span><span style="color: #9c9e9e;"> a comprehensive set of features</span></li>
+					<li><span style="font: bold 16px/42px inherit; color:#FFFFFF">Stats</span><span style="color: #9c9e9e;"> compute statistics on extracted features</span></li>
+					<li><span style="font: bold 16px/42px inherit; color:#FFFFFF">Diff</span><span style="color: #9c9e9e;"> compute the difference between app versions</span></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Collect</h2>
+				<ul class="styled-list">
+					<li>Over 18 months</li>
+					<li>Tracked 24,436 unique apps</li>
+					<li>At least 2 versions per app</li>
+					<li>Collected 56,349 APKs</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Decompile</h2>
+				<ul class="styled-list">
+					<blockquote>
+					Leveraging existing reverse engineering tools to decode apps into their nearly original format
+					, which result in the app byte code and the original layout XML files.
+				</blockquote>
+			</section>
+			<section>
+				<h2>Extract</h2>
+				<table>
+					<tr>
+						<td>Listing Details</td>
+						<td>Title, description, reviews, category, price, date published, ratings count, rating, install size, downloads count, permissions, what’s new.</td>
+					</tr>
+					<tr>
+						<td>Visual Design</td>
+						<td>Layout directories, layout files, view group containers, view elements, relationships, drawable resources, UI text resources.</td>
+					</tr>
+					<tr>
+						<td>Behavior</td>
+						<td>API invocations, manifest (AndroidManifest.xml), third-party libraries.</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Stats</h2>
+				<ul class="styled-list">
+					<li>Compute descriptive statistics</li>
+					<li>What is the percentage of apps that used a given design pattern?</li>
+					<li>What is the percentage of apps that switched into an alternative design pattern?</li>
+					<li>What is the percentage of apps that maintained the use of a given design pattern?</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Diff</h2>
+				<ul class="styled-list">
+					<li>Compute changes that occur to the extracted features</li>
+					<li>Observe how changes are reflected across other levels</li>
+				</ul>
+			</section>
+			<section>
+				<h2>UI Design Pattern Changes</h2>
+				<ul class="styled-list">
+					<li>Navigation design patterns</li>
+					<ul class="horizontal-list">
+					  <li>Tab Layout</li>
+					  <li>Fragments</li>
+					  <li>Horizontal Paging</li>
+					  <li>Action Bar</li>
+					  <li>Up Navigation</li>
+					  <li>Navigation Drawers</li>
+					</ul>
+					<li>Custom UI Components</li>
+					<li>Homescreen widgets</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Highlights of Findings</h2>
+				<ul>
+					<li>Some apps would switch to a design pattern even after it was deprecated.</li>
+					<li>The adoption rate of newly introduced design patterns is relatively low.</li>
+					<li>Some apps would update their listing details to reflect changes in design patterns.</li>
+					<li>Some design patterns have slow adoption rate but higher continuity of use over multiple releases.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Limitations</h2>
+				<ul class="styled-list">
+					<li>Lack of structural indexing of UI data</li>
+					<li>Too specific; requires specialized scripts</li>
+					<li>A few number of versions were studied</li>
+					<li>Does not scale well</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Research Questions</h2>
+				<ul class="styled-list">
+					<li style="color: #888989;">RQ1: What are the benefits of the deep and longitudinal approach to mining mobile applications?</li>
+					<li>RQ2: How can we enable deep searching and mining of mobile apps over time?</li>
+			</section>
+			<section>
+				<h2>Sieveable: A Scalable Platform for Mining Mobile Applications</h2>
+			</section>
+			<section>
+				<h2>Challenges</h2>
+				<ul class="styled-list">
+					<li>Dealing with heterogeneous data</li>
+					<ul>
+					  <li>Store Listing Details: document-oriented</li>
+					  <li>UI: hierarchical tree structure</li>
+					  <li>Code: text data</li>
+					</ul>
+					<li>Creating structural indexes</li>
+					<li>Designing an effective and generalizable search engine.</li>
+				</ul>
+			</section>
+			<section>
+			</section>
+			<section>
+				<div class="right-column">
+				</div>
+				<div class="left-column">
+				</div>
 			</section>
 		</div>
 	</div>
