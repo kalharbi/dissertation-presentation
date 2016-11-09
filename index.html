@@ -38,19 +38,6 @@
 				<p style="font-size:50%;">November 11th, 2016</p>
 			</section>
 			<section>
-				<h2>Outline</h2>
-				<ul>
-					<li>Introduction</li>
-					<li>Problem Statement</li>
-					<li>A Pilot Experiment</li>
-					<li>Approach</li>
-					<li>Sieveable: A Scalable platform</li>
-					<li>Search Queries</li>
-					<li>Temporal Analysis</li>
-					<li>Future Work</li>
-				</ul>
-			</section>
-			<section>
 				<h2>Digital Marketplaces</h2>
 				<img style="width:80%; background-color:#EAEAEA" src="./images/marketplaces/digital-marketplaces.png" alt="Digital Marketplaces" />
 			</section>
@@ -115,53 +102,23 @@
 			<section>
 				<blockquote>Prior research efforts have been largely constrained to one view of analysis and a single snapshot in time. </blockquote>
 			</section>
-			<section class="vertical-stretch">
-				<!--<h2 style="margin:0; padding:0;">The State of Existing Research</h2>-->
+			<section data-background-color="#FFFFFF" class="vertical-stretch">
+				<div id="71835f7e-078d-4d76-b89a-c6620a617449" style="height: 700px; width: 1000px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("71835f7e-078d-4d76-b89a-c6620a617449", [{"y": ["Code", "Code", "Listing", "Listing+UI"], "text": ["Enck et al.<br>OSDI \u201910", "Liu et al<br>MobiSys \u201915", "Seneviratne et al.<br>SPME \u201914"], "mode": "markers", "name": "Privacy", "type": "scatter", "x": ["Single", "Single", "Single", "Single"], "marker": {"size": [1.3416407864998738, 60.0, 15.812020743725325], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Listing", "Listing+UI+Code"], "text": ["Chen et al.<br>WSDM \u201915"], "mode": "markers", "name": "Data Mining", "type": "scatter", "x": ["Single", "Few"], "marker": {"size": [36.019994447528724], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Code", "Code", "Code", "Listing+UI+Code"], "text": ["Wei et al<br>Mobicom \u201912", "Rasthofer et al.<br>NDSS \u201914", "Zhou et al.<br>SP \u201912"], "mode": "markers", "name": "Security", "type": "scatter", "x": ["Single", "Single", "Single", "Many"], "marker": {"size": [1.2727922061357855, 25.69046515733026, 8.694826047713663], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Listing", "Listing+UI"], "text": ["Chen et al.<br>ICSE \u201914"], "mode": "markers", "name": "Software Engineering", "type": "scatter", "x": ["Single", "Single"], "marker": {"size": [0.4898979485566356], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}], {"height": 700, "title": "", "width": 1000, "xaxis": {"titlefont": {"size": 14, "family": "sans-serif"}, "title": "App Versions Studied", "type": "category"}, "yaxis": {"tickangle": -45, "titlefont": {"size": 14, "family": "sans-serif"}, "type": "category"}, "margin": {"t": 0, "pad": 0}}, {"showLink": false, "linkText": "Export to plot.ly"})</script>
+			</section>
+			<section data-background-color="#FFFFFF" class="vertical-stretch" data-transition="fade-in" data-transition-speed="fast">
+				<div id="095692e1-eb06-48b3-9a0f-da2708064c38" style="height: 700px; width: 1000px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("095692e1-eb06-48b3-9a0f-da2708064c38", [{"y": ["Code", "Code", "Listing", "Listing+Code"], "text": ["Enck et al.<br>OSDI \u201910", "Liu et al<br>MobiSys \u201915", "Seneviratne et al.<br>SPME \u201914", "Lin et al.<br>SOUPS \u201914"], "mode": "markers", "name": "Privacy", "type": "scatter", "x": ["Single", "Single", "Single", "Single"], "marker": {"size": [1.3416407864998738, 60.0, 15.812020743725325, 80.59007383046624], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Listing+UI", "Listing", "Listing+UI+Code"], "text": ["Shirazi et al.<br>EICS \u201913", "Chen et al.<br>WSDM \u201915"], "mode": "markers", "name": "Data Mining", "type": "scatter", "x": ["Single", "Single", "Few"], "marker": {"size": [4.898979485566356, 36.019994447528724], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Code", "Listing+Code", "Code", "Listing+Code", "Code", "Listing+Code", "Listing+UI+Code"], "text": ["Wei et al<br>Mobicom \u201912", "Viennot et al.<br>SIGMETRICS \u201914", "Rasthofer et al.<br>NDSS \u201914", "Pandita et al.<br>SEC \u201913", "Zhou et al.<br>SP \u201912", "Gorla et al<br>ICSE \u201914"], "mode": "markers", "name": "Security", "type": "scatter", "x": ["Single", "Single", "Single", "Single", "Single", "Single", "Many"], "marker": {"size": [1.2727922061357855, 229.78250586152114, 25.69046515733026, 5.904235767650205, 8.694826047713663, 36.742346141747674], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Listing", "Listing+Code"], "text": ["Chen et al.<br>ICSE \u201914", "Liu et all<br>ICSE \u201914"], "mode": "markers", "name": "Software Engineering", "type": "scatter", "x": ["Single", "Single"], "marker": {"size": [0.4898979485566356, 1.3190905958272918], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}], {"height": 700, "title": "", "width": 1000, "xaxis": {"titlefont": {"size": 14, "family": "sans-serif"}, "title": "App Versions Studied", "type": "category"}, "yaxis": {"tickangle": -45, "titlefont": {"size": 14, "family": "sans-serif"}, "type": "category"}, "margin": {"t": 0, "pad": 0}}, {"showLink": false, "linkText": "Export to plot.ly"})</script>
+			</section>
+			<section data-background-color="#FFFFFF" class="vertical-stretch" data-transition="fade-in" data-transition-speed="fast">
+				<div id="b53b7686-1217-492f-aca1-fc9b9f5d8516" style="height: 700px; width: 1000px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("b53b7686-1217-492f-aca1-fc9b9f5d8516", [{"y": ["Code", "Code", "Listing", "Listing+Code"], "text": ["Enck et al.<br>OSDI \u201910", "Liu et al<br>MobiSys \u201915", "Seneviratne et al.<br>SPME \u201914", "Lin et al.<br>SOUPS \u201914"], "mode": "markers", "name": "Privacy", "type": "scatter", "x": ["Single", "Single", "Single", "Single"], "marker": {"size": [1.3416407864998738, 60.0, 15.812020743725325, 80.59007383046624], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Listing", "Listing+UI", "Listing", "Listing", "Listing", "Listing+UI+Code"], "text": ["Fu et al.<br>SIGKDD \u201913", "Shirazi et al.<br>EICS \u201913", "Chen et al.<br>WSDM \u201915", "Lin et al.<br>SIGIR \u201914", "Zhu et al.<br>TKDE \u201915"], "mode": "markers", "name": "Data Mining", "type": "scatter", "x": ["Few", "Single", "Single", "Few", "Few", "Few"], "marker": {"size": [101.43756700552315, 4.898979485566356, 36.019994447528724, 19.784842683225964, 30.044966300530277], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Code", "Listing+Code", "Code", "Listing+Code", "Listing+Code", "Code", "Listing+Code", "Listing+UI+Code"], "text": ["Wei et al<br>Mobicom \u201912", "Viennot et al.<br>SIGMETRICS \u201914", "Rasthofer et al.<br>NDSS \u201914", "Crussell et al.<br>ESORICS \u201912", "Pandita et al.<br>SEC \u201913", "Zhou et al.<br>SP \u201912", "Gorla et al<br>ICSE \u201914"], "mode": "markers", "name": "Security", "type": "scatter", "x": ["Single", "Single", "Single", "Few", "Single", "Single", "Single", "Many"], "marker": {"size": [1.2727922061357855, 229.78250586152114, 25.69046515733026, 67.08203932499369, 5.904235767650205, 8.694826047713663, 36.742346141747674], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Listing+Code", "Listing", "Listing+Code"], "text": ["Minelli et al.<br>CSMR \u201913", "Chen et al.<br>ICSE \u201914", "Liu et all<br>ICSE \u201914"], "mode": "markers", "name": "Software Engineering", "type": "scatter", "x": ["Few", "Single", "Single"], "marker": {"size": [1.0954451150103321, 0.4898979485566356, 1.3190905958272918], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}], {"height": 700, "title": "", "width": 1000, "xaxis": {"titlefont": {"size": 14, "family": "sans-serif"}, "title": "App Versions Studied", "type": "category"}, "yaxis": {"tickangle": -45, "titlefont": {"size": 14, "family": "sans-serif"}, "type": "category"}, "margin": {"t": 0, "pad": 0}}, {"showLink": false, "linkText": "Export to plot.ly"})</script>
+			</section>
+			<section data-background-color="#FFFFFF" class="vertical-stretch" data-transition="fade-in" data-transition-speed="fast">
+				<div id="1f892e05-e032-4d04-90fd-043a67694bcb" style="height: 700px; width: 1000px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("1f892e05-e032-4d04-90fd-043a67694bcb", [{"y": ["Code", "Code", "Listing", "Listing+Code"], "text": ["Enck et al.<br>OSDI \u201910", "Liu et al<br>MobiSys \u201915", "Seneviratne et al.<br>SPME \u201914", "Lin et al.<br>SOUPS \u201914"], "mode": "markers", "name": "Privacy", "type": "scatter", "x": ["Single", "Single", "Single", "Single"], "marker": {"size": [1.3416407864998738, 60.0, 15.812020743725325, 80.59007383046624], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Listing", "Listing+UI", "Listing", "Listing", "Listing", "Listing+UI+Code"], "text": ["Fu et al.<br>SIGKDD \u201913", "Shirazi et al.<br>EICS \u201913", "Chen et al.<br>WSDM \u201915", "Lin et al.<br>SIGIR \u201914", "Zhu et al.<br>TKDE \u201915"], "mode": "markers", "name": "Data Mining", "type": "scatter", "x": ["Few", "Single", "Single", "Few", "Few", "Few"], "marker": {"size": [101.43756700552315, 4.898979485566356, 36.019994447528724, 19.784842683225964, 30.044966300530277], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Code", "Listing+Code", "Code", "Listing+Code", "Listing+Code", "Code", "Listing+Code", "Listing+UI+Code"], "text": ["Wei et al<br>Mobicom \u201912", "Viennot et al.<br>SIGMETRICS \u201914", "Rasthofer et al.<br>NDSS \u201914", "Crussell et al.<br>ESORICS \u201912", "Pandita et al.<br>SEC \u201913", "Zhou et al.<br>SP \u201912", "Gorla et al<br>ICSE \u201914"], "mode": "markers", "name": "Security", "type": "scatter", "x": ["Single", "Single", "Single", "Few", "Single", "Single", "Single", "Many"], "marker": {"size": [1.2727922061357855, 229.78250586152114, 25.69046515733026, 67.08203932499369, 5.904235767650205, 8.694826047713663, 36.742346141747674], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}, {"y": ["Listing+Code", "Listing+Code", "Listing", "Listing", "Listing+Code"], "text": ["Minelli et al.<br>CSMR \u201913", "McIlroy et al.<br>Empirical Software Engineering \u201915", "Martin et al.<br>FSE \u201916", "Chen et al.<br>ICSE \u201914", "Liu et all<br>ICSE \u201914"], "mode": "markers", "name": "Software Engineering", "type": "scatter", "x": ["Few", "Many", "Many", "Single", "Single"], "marker": {"size": [1.0954451150103321, 25.353106318555916, 39.75349041279269, 0.4898979485566356, 1.3190905958272918], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}}], {"height": 700, "title": "", "width": 1000, "xaxis": {"titlefont": {"size": 14, "family": "sans-serif"}, "title": "App Versions Studied", "type": "category"}, "yaxis": {"tickangle": -45, "titlefont": {"size": 14, "family": "sans-serif"}, "type": "category"}, "margin": {"t": 0, "pad": 0}}, {"showLink": false, "linkText": "Export to plot.ly"})</script>
+			</section>
+			<section data-background-color="#FFFFFF" class="vertical-stretch" data-transition="fade-in" data-transition-speed="fast">
 				<div id="69e8960f-225e-4bf4-a980-22bee5917698" style="height: 700px; width: 1000px;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("69e8960f-225e-4bf4-a980-22bee5917698", [{"name": "Privacy", "y": ["Code", "Code", "Listing", "Listing+Code"], "marker": {"size": [1.3416407864998738, 60.0, 15.812020743725325, 80.59007383046624], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}, "text": ["Enck et al.<br>OSDI \u201910", "Liu et al<br>MobiSys \u201915", "Seneviratne et al.<br>SPME \u201914", "Lin et al.<br>SOUPS \u201914"], "mode": "markers", "x": ["Single", "Single", "Single", "Single"], "type": "scatter"}, {"name": "Data Mining", "y": ["Listing", "Listing+UI", "Listing", "Listing", "Listing", "Listing+UI+Code", "Listing+UI+Code"], "marker": {"size": [101.43756700552315, 4.898979485566356, 36.019994447528724, 19.784842683225964, 30.044966300530277, 58.14585109876714, 164.82263194112633], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}, "text": ["Fu et al.<br>SIGKDD \u201913", "Shirazi et al.<br>EICS \u201913", "Chen et al.<br>WSDM \u201915", "Lin et al.<br>SIGIR \u201914", "Zhu et al.<br>TKDE \u201915", "Alharbi et all<br>MobileHCI \u201915", "Alharbi et all<br>"], "mode": "markers", "x": ["Few", "Single", "Single", "Few", "Few", "Few", "Many"], "type": "scatter"}, {"name": "Security", "y": ["Code", "Listing+Code", "Code", "Listing+Code", "Listing+Code", "Code", "Listing+Code"], "marker": {"size": [1.2727922061357855, 229.78250586152114, 25.69046515733026, 67.08203932499369, 5.904235767650205, 8.694826047713663, 36.742346141747674], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}, "text": ["Wei et al<br>Mobicom \u201912", "Viennot et al.<br>SIGMETRICS \u201914", "Rasthofer et al.<br>NDSS \u201914", "Crussell et al.<br>ESORICS \u201912", "Pandita et al.<br>SEC \u201913", "Zhou et al.<br>SP \u201912", "Gorla et al<br>ICSE \u201914"], "mode": "markers", "x": ["Single", "Single", "Single", "Few", "Single", "Single", "Single"], "type": "scatter"}, {"name": "Software Engineering", "y": ["Listing+Code", "Listing+Code", "Listing", "Listing", "Listing+Code"], "marker": {"size": [1.0954451150103321, 25.353106318555916, 39.75349041279269, 0.4898979485566356, 1.3190905958272918], "sizemode": "diameter", "line": {"width": 2}, "symbol": "circle-open-dot"}, "text": ["Minelli et al.<br>CSMR \u201913", "McIlroy et al.<br>Empirical Software Engineering \u201915", "Martin et al.<br>FSE \u201916", "Chen et al.<br>ICSE \u201914", "Liu et all<br>ICSE \u201914"], "mode": "markers", "x": ["Few", "Many", "Many", "Single", "Single"], "type": "scatter"}], {"title": "", "margin": {"t": 0, "pad": 0}, "xaxis": {"title": "App Versions Studied", "titlefont": {"size": 14, "family": "sans-serif"}, "type": "category"}, "height": 700, "yaxis": {"tickangle": -45, "titlefont": {"size": 14, "family": "sans-serif"}, "type": "category"}, "width": 1000}, {"showLink": false, "linkText": "Export to plot.ly"})</script>
 			</section>
 			<section>
 				<blockquote>Despite the wealth of information that exists in apps data, it remains largely unutilized and has not been widely used to address critical issues concerning the development and design of applications.</blockquote>
-			</section>
-			<section>
-				<h2>Deep Approach</h2>
-				<blockquote>Deep and structural indexing of apps across multiple levels (listing, UI, code, libraries, backend providers)</blockquote>
-			</section>
-			<section>
-				<h2>Sentiment Analysis</h2>
-				<div class="image">
-					<h2>UI</h2>
-				  <img src="./images/review-1.png" style="width: 70%;" alt="App review example" />
-				</div>
-				<div class="image">
-					<h2>Code</h2>
-			  	<img src="./images/review-2.png" style="width: 70%;" alt="App review example" />
-				</div>
-			</section>
-			<section class="vertical-stretch">
-				<h2>Privacy Analysis</h2>
-				<div class="right-column">
-					<img style="width: 340px; margin:0; padding:0;" src="./images/barcode-scanner-ui.png" alt="Barcode scanner app UI screenshot" />
-				</div>
-				<div class="left-column">
-					<img style="width: 420px; margin:0; padding:0;" src="./images/barcode-scanner-review.png" alt="Barcode scanner app review" />
-				</div>
-			</section>
-			<section>
-				<h2>Accessibility Analysis</h2>
-				<h4 style="text-align: left;">Layout XML file:</h4>
-				<pre><code class="html">
-&lt;ImageButton
-    android:id="@+id/edit_img_button"
-    android:contentDescription="Edit" /&gt;
-&lt;ImageButton
-    android:id="@+id/camera_image_button" /&gt;
-				</code></pre>
-				<h4 style="text-align: left;">Source code file:</h4>
-				<pre><code class="Java">
-ImageButton cameraImageButton = (ImageButton) findViewById(
-                                  R.id.camera_image_button);
-cameraImageButton.setContentDescription('Take a picture');
-				</code></pre>
 			</section>
 			<section>
 				<h2>Longitudinal Approach</h2>
@@ -193,14 +150,54 @@ cameraImageButton.setContentDescription('Take a picture');
 				</ul>
 			</section>
 			<section>
+				<h2>Deep Approach</h2>
+				<blockquote>Deep and structural indexing of apps across multiple levels (listing, UI, code, libraries, backend providers)</blockquote>
+			</section>
+			<section>
+				<h2>Sentiment Analysis</h2>
+				<div class="image">
+					<h2>UI</h2>
+					<img src="./images/review-1.png" style="width: 70%;" alt="App review example" />
+				</div>
+				<div class="image">
+					<h2>Code</h2>
+					<img src="./images/review-2.png" style="width: 70%;" alt="App review example" />
+				</div>
+			</section>
+			<section class="vertical-stretch">
+				<h2>Privacy Analysis</h2>
+				<div class="right-column">
+					<img style="width: 340px; margin:0; padding:0;" src="./images/barcode-scanner-ui.png" alt="Barcode scanner app UI screenshot" />
+				</div>
+				<div class="left-column">
+					<img style="width: 420px; margin:0; padding:0;" src="./images/barcode-scanner-review.png" alt="Barcode scanner app review" />
+				</div>
+			</section>
+			<section>
+				<h2>Accessibility Analysis</h2>
+				<h4 style="text-align: left;">Layout XML file:</h4>
+				<pre><code class="html">
+&lt;ImageButton
+		android:id="@+id/edit_img_button"
+		android:contentDescription="Edit" /&gt;
+&lt;ImageButton
+		android:id="@+id/camera_image_button" /&gt;
+				</code></pre>
+				<h4 style="text-align: left;">Source code file:</h4>
+				<pre><code class="Java">
+ImageButton cameraImageButton = (ImageButton) findViewById(
+																	R.id.camera_image_button);
+cameraImageButton.setContentDescription('Take a picture');
+				</code></pre>
+			</section>
+			<section>
 				<h2>As we come to recognize the value in mining apps with both a deep and longitudinal perspectives...</h2>
 				<ul>
 					<li class="fragment">Challenging to model large and heterogeneous data</li>
-				  <li class="fragment">Difficult to collect historical data</li>
-				  <li class="fragment">Hard to observe changes</li>
+					<li class="fragment">Difficult to collect historical data</li>
+					<li class="fragment">Hard to observe changes</li>
 				</ul>
 			</section>
-
 			<section>
 				<h2>Thesis Statement</h2>
 				<blockquote>The goal of this work is to enable a more in-depth analysis of mobile applications and gain insights into various aspects of their design and development processes as they evolve over time.</blockquote>
@@ -383,6 +380,9 @@ cameraImageButton.setContentDescription('Take a picture');
 				</ul>
 			</section>
 			<section>
+				<img style="background-color: #FFFFFF" src="images/part3/architecture.png" alt="Sieveable's system architecture"/>
+			</section>
+			<section>
 				<h2>Indexing the Extracted Features</h2>
 				<ul>
 					<li>Listing Details</li>
@@ -477,11 +477,129 @@ RETURN app
 				</div>
 			</section>
 			<section>
-				<div class="right-column">
-				</div>
-				<div class="left-column">
+				<h2>Temporal Analysis of the Design and Development of Mobile Applications</h2>
+				<br />
+				<ul>
+					<li><h3>Visual Design Mining Analysis</h3></li>
+					<li><h3>Accessibility Mining Analysis</h3></li>
+					<li><h3>Privacy Mining Analysis</h3></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Visual Design Mining Analysis</h2>
+				<img src="images/part3/sheets.png" style="width:32%"  alt="Material Design Apps, sheets app" />
+				<img src="images/part3/fabulous.png" style="width:32%" alt="Material Design Apps, fabulous app" />
+				<img src="images/part3/transit.png" style="width:32%"  alt="Material Design Apps, transit app" />
+			</section>
+			<section>
+				<h2>Floating Action Button (FAB)</h2>
+				<img src="images/part3/fab-Gmail.png" style="width:32%; margin-right: 5%;"  alt="Material Design Apps, GMail app" />
+				<img src="images/part3/fab-lifesum.png" style="width:32%" alt="Material Design Apps, Lifesum app" />
+			</section>
+			<section data-transition="fade-in" data-transition-speed="fast">
+				<h2>Sieveable Search Query</h2>
+				<pre>
+					<code class="html">
+MATCH app
+WHERE
+   &lt;android.support.design.widget.FloatingActionButton /&gt;
+   &lt;date-published>(*)&lt;/date-published&gt;
+   &lt;rating>(*)&lt;/rating&gt;
+   &lt;downloads>(*)&lt;/downloads&gt;
+RETURN app, l$1 AS rDate, l$2 as rating, l$3 as downloads
+					</code>
+				</pre>
+			</section>
+			<section data-transition="fade-in" data-transition-speed="fast">
+				<h2>Sieveable Search Query</h2>
+				<pre>
+					<code class="html">
+MATCH app
+WHERE
+	 &lt;android.support.design.widget.FloatingActionButton /&gt;
+	 &lt;date-published>(*)&lt;/date-published&gt;
+	 &lt;rating>(*)&lt;/rating&gt;
+	 &lt;downloads>(*)&lt;/downloads&gt;
+RETURN app, l$1 AS rDate, l$2 as rating, l$3 as downloads
+					</code>
+				</pre>
+				<pre>
+					<code class="html">
+MATCH app
+WHERE
+	 &lt;com.getbase.floatingactionbutton.FloatingActionButton /&gt;
+	 &lt;date-published>(*)&lt;/date-published&gt;
+	 &lt;rating>(*)&lt;/rating&gt;
+	 &lt;downloads>(*)&lt;/downloads&gt;
+RETURN app, l$1 AS rDate, l$2 as rating, l$3 as downloads
+					</code>
+				</pre>
+			</section>
+			<section>
+				<img src="./images/part3/fab_over_years.png" alt="the adoption rate of FAB over the years"/>
+				<h4>The adoption rate of the Floating Action Button (FAB) over the years.</h4>
+			</section>
+			<section class="vertical-stretch">
+				<div id="7b369998-0dd1-4764-bc99-4b21ebdab68f" style="height: 100%; width: 100%;" class="plotly-graph-div"></div>
+				<div>
+					<a href="https://plot.ly/~kalharbi/43/?share_key=ocNqDyxpLAA01QkVb9zDEH" target="_blank" title="" style="display: block; text-align: center;"><img src="https://plot.ly/~kalharbi/43.png?share_key=ocNqDyxpLAA01QkVb9zDEH" alt="" style="max-width: 100%;width: 985px;"  width="985" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+					<script data-plotly="kalharbi:43" sharekey-plotly="ocNqDyxpLAA01QkVb9zDEH" src="https://plot.ly/embed.js" async></script>
+					<h4>The percentage of apps that started adopting the Floating Action Button (FAB) using four popular libraries by calendar quarter.</h4>
 				</div>
 			</section>
+			<section>
+				<h2>Navigation Drawer</h2>
+				<img src="images/part3/closed-nav-drawer-kitchenstories.png" style="width:32%; margin-right: 5%;"  alt="Material Design Apps, closed navigation drawer" />
+				<img src="images/part3/open-nav-drawer-kitchenstories.png" style="width:32%" alt="Material Design Apps, opened navigation drawer" />
+			</section>
+			<section>
+				<img src="images/part3/nav_drawer_over_years.png">
+				<h4>The adoption rate of the Navigation Drawer over the years.</h4>
+			</section>
+			<section class="vertical-stretch">
+				<img src="images/part3/nav_drawer_by_download.png"/>
+			</section>
+			<section>
+				<h2>Accessibility Mining Analysis</h2>
+			</section>
+			<section>
+				<h2>Accessibility Violation: Labeling Visual UI controls</h2>
+			</section>
+			<section>
+				<img src="images/part3/accessibility_percent_labeled_image_btns.png" />
+				<h4>The average of accessible image buttons in apps over the release years</h4>
+			</section>
+			<section>
+				<img src="images/part3/accessibility_no_labeled_image_btns.png " />
+				<h4>The percentage of apps that have no accessible ImageButton elements</h4>
+			</section>
+			<section>
+				<h2>Privacy Mining Analysis</h2>
+			</section>
+			<section class="vertical-stretch">
+				<img src="images/part3/added_permissions.png"/>
+				<h4>The five most added permissions in each year</h4>
+			</section>
+			<section>
+				<h2>Contributions</h2>
+				<ul style="styled-list">
+					<li class="fragment">A novel approach that enables mining mobile apps at multiple levels over time</li>
+					<li class="fragment">The proposed approach is manifested in a scalable platform that has been fully implemented and deployed </li>
+					<li class="fragment">Demonstrated the utility of the approach by conducting diverse types of temporal analyses</li>
+				</ul>
+			</section>
+			<section>
+				<h2>A Deep and Longitudinal Approach to Mining Mobile Applications</h2>
+				<hr />
+				<h3 style="margin: 10px 10px;" >Thank you!</h3>
+				<p style="margin: 0px 0px;">
+Tom Yeh and everyone at the Sikuli lab</p>
+<p style="text-align: center;">&amp;</p>
+<p>King Abdulaziz University</p>
+<p style="text-align: center;">&amp;</p>
+<p>everyone else who is here today</p>
+</p>
+		  </section>
 		</div>
 	</div>
 
